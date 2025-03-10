@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LoginStyled = styled.div`
     padding-top: 10px;
@@ -70,6 +70,10 @@ export const LoginStyled = styled.div`
 
     .signup-button {
         background-color: #28a745;
+        color: #ffffff;
+    }
+    .findID-button {
+        background-color: rgb(238, 216, 23);
         color: #ffffff;
     }
 

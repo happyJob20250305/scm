@@ -16,7 +16,7 @@ export const CommonCodeMainStyled = styled.div`
     th,
     td {
         padding: 12px;
-        text-align: left;
+        text-align: center;
     }
 
     th {

@@ -1,20 +1,25 @@
 import styled from "styled-components";
 import { InputProps } from "./StyledInput";
 
-export const StyledInputStyled = styled.input<InputProps>`
+export const StyledInputStyled = styled.input<InputProps & { as?: string }>`
     font-size: 16px;
     padding: 10px;
     border-radius: 6px;
     outline: none;
     transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
 
     /* 크기별 스타일 */
     ${({ size }) => {
         switch (size) {
             case "small":
-                return `padding: 6px 10px; font-size: 14px;`;
+                return `padding: 6px 10px; font-size: 14px; `;
             case "large":
                 return `padding: 12px 16px; font-size: 18px;`;
+            case "modal":
+                return `padding: 6px 10px; font-size: 12px;`;
+            case "search":
+                return `padding: 6px 10px; font-size: 18px; width:210px;`;
             default:
                 return `padding: 10px 14px; font-size: 16px;`;
         }
@@ -60,5 +65,23 @@ export const StyledInputStyled = styled.input<InputProps>`
       &:focus {
         border-color: #c0392b !important;
       }
+    `}
+
+    /* ✅ textarea일 때 적용될 스타일 추가 */
+    ${({ as }) =>
+        as === "textarea" &&
+        `
+        min-height: 150px;
+        display:block;
+        resize: vertical;
+        overflow-wrap: anywhere;
+        word-wrap: break-word;
+        word-break: break-word;
+        white-space: pre-wrap;
+        overflow: auto;
+        border: 1px solid #ccc;
+          &:focus {
+            border-color: #2980b9;
+          }
     `}
 `;

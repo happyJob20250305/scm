@@ -31,9 +31,9 @@ export const NoticeSearch = () => {
 
     return (
         <NoticeSearchStyled>
-            <StyledInput ref={title}></StyledInput>
-            <StyledInput type='date' onChange={(e) => setStartDate(e.target.value)}></StyledInput>
-            <StyledInput type='date' onChange={(e) => setEndDate(e.target.value)}></StyledInput>
+            <StyledInput size="small" ref={title}></StyledInput>
+            <StyledInput size="small" type='date' onChange={(e) => setStartDate(e.target.value)}></StyledInput>
+            <StyledInput size="small" type='date' onChange={(e) => setEndDate(e.target.value)}></StyledInput>
             <StyledButton variant='secondary' onClick={handlerSearch}>
                 검색
             </StyledButton>

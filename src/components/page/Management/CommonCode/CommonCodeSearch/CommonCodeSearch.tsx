@@ -29,7 +29,7 @@ export const CommonCodeSearch = () => {
         <CommonCodeSearchStyled>
             <StyledSelectBox options={options} value={selectValue} onChange={setSelectValue} />
             <StyledInput ref={inputValue} />
-            <StyledButton onClick={handlerSearch}>검색</StyledButton>
+            <StyledButton variant='secondary' onClick={handlerSearch}>검색</StyledButton>
             <StyledButton onClick={() => setModal(!modal)}>등록</StyledButton>
         </CommonCodeSearchStyled>
     );
